@@ -1,0 +1,15 @@
+<?php
+$blog = $block->getBlogDetail();
+?>
+<div class="mw-simpleblog">
+    <p>
+        <p>
+            <b>
+                <?php echo $blog->getTitle() ?>
+            </b>
+        </p>
+        <p>
+            <?php echo $blog->getDescription() ?>
+        </p>
+    </p>
+</div>

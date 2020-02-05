@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+  <table name="blog" resource="default" engine="innodb" comment="blog">
+    <column xsi:type="int" name="id" padding="11" unsigned="false" nullable="false" identity="true" comment="Primary Key"/>
+    <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Blog Title"/>
+    <column xsi:type="mediumtext" name="description" nullable="false" comment="Blog Description"/>
+    <column xsi:type="boolean" name="status" nullable="false" default="1" comment="Blog Description"/>
+    <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Creation Time"/>
+    <column xsi:type="timestamp" name="updated_at" on_update="false" nullable="true" comment="Creation Time"/>
+    <column xsi:type="timestamp" name="deleted_at" on_update="false" nullable="true" comment="Deleted At"/>
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+      <column name="id"/>
+    </constraint>
+  </table>
+</schema>
